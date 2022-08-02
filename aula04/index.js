@@ -1,0 +1,1 @@
+console.log('Meu nome é Gustavo, tenho', 18,'anos.');
