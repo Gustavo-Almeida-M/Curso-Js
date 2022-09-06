@@ -27,6 +27,14 @@ body
     width: 100%;
     display: block;
 }
+.container h1
+{
+    font-size: 2.0rem;
+}
+.container p
+{
+    font-size: 1.3rem;
+}
 form input
 {
     font-size: 24px;
@@ -39,10 +47,17 @@ form input:focus
 }
 .button
 {
-    width: 50%;
+    width: 100%;
+    height: 50px;
     margin: 0px auto;
     border: solid 0.5px rgb(0, 0, 0);
     border-radius: 3px;
     background-color: var(--cor-primaria);
     color: #fff;
+}
+.info
+{
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
 }
