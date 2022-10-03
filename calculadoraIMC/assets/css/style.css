@@ -61,7 +61,15 @@ form input:focus
     width: 75%;
     margin: 0 auto;
 }
-.resultado-bom
+.valido
 {
-    background-color: red;
+    background-color: rgb(19, 187, 7);
+    padding: 10px 20px;
+    max-width: 96%;
+}
+.invalido
+{
+    background-color: rgb(187, 7, 7);
+    padding: 10px 20px;
+    max-width: 96%;
 }

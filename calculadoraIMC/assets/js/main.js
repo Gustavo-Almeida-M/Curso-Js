@@ -9,14 +9,23 @@ form.addEventListener('submit', function (e){
     const peso = Number(inputPeso.value);
     const altura = Number(inptAltura.value);
 
-    if(peso && altura)
+    if(!peso)
     {
-        console.log(peso, altura);
+        resultado("Peso invalido", false);
+        return;
     }
-    else
+    if(!altura)
     {
-        console.log("Não é um número!");
+        resultado("Altura invalida", false);
+        return;
     }
+
+    const imc = getIMC(peso, altura);
+    const grauIMC = getGrauImc(imc);
+
+    const msg = `Seu IMC é ${imc}, ${grauIMC}.`;
+
+    resultado(msg, true);
 });
 
 function criaP()
@@ -25,14 +34,57 @@ function criaP()
     return p; 
 }
 
-function resultado(msg)
+function getIMC(peso, altura)
+{
+    const imc = peso / altura ** 2;
+    return imc.toFixed(2);
+}
+
+function getGrauImc(imc)
+{
+    const grau = ['Abaixo do peso', 'peso normal', 'sobre peso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
+    if(imc > 40)
+    {
+        return grau[5];
+    }
+    else if(imc > 35)
+    {
+        return grau[4];
+    }
+    else if(imc > 30)
+    {
+        return grau[3];
+    }
+    else if(imc > 25)
+    {
+        return grau[2];
+    }
+    else if(imc > 18.5)
+    {
+        return grau[1];
+    }
+    else
+    {
+        return grau[0];
+    }
+}
+function resultado(msg, isValid)
 {
     const valor = document.querySelector('.valor');
     valor.innerHTML = '';
-
     const p = criaP();
-    p.classList.add('resultado-bom');
 
+    if(isValid)
+    {
+        p.classList.add('valido');
+    }
+    else
+    {
+        p.classList.add('invalido');
+    }
+
+    
     p.innerHTML = msg;
+    
     valor.appendChild(p);
 }
