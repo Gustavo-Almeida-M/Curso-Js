@@ -34,4 +34,5 @@ function imprimir(titulo, descricao)
     imprimirDescricao.innerHTML = descricao;
 
     tarefa.appendChild(imprimirTitulo);
+
 }
