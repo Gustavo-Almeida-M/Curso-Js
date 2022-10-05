@@ -1,82 +1,14 @@
 
 function converteDia(diaSemana)
 {
-    let diaNome;
-
-    switch(diaSemana)
-    {
-        case 0:
-            diaNome = "Domingo";
-            return diaNome;
-        case 1: 
-            diaNome = "Segunda";
-            return diaNome;
-        case 2: 
-            diaNome = "Terça";
-            return diaNome;
-        case 3: 
-            diaNome = "Quarta";
-            return diaNome;
-        case 4: 
-            diaNome = "Quinta";
-            return diaNome;
-        case 5: 
-            diaNome = "Sexta";
-            return diaNome;
-        case 6: 
-            diaNome = "Sabado";
-            return diaNome;
-        default:
-            diaNome = "Não é um dia valido";
-            return diaNome;
-    }
+    const dia = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'];
+    return dia[diaSemana];
 }
 function converteMes(valorMes)
 {
-    let nomeMes;
+   const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abriu', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
-    switch(valorMes)
-    {
-        case 0:
-            nomeMes = "Janeiro";
-            return nomeMes;
-        case 1: 
-            nomeMes = "Fevereiro";
-            return nomeMes;
-        case 2: 
-            nomeMes = "Março";
-            return nomeMes;
-        case 3: 
-            nomeMes = "Abril";
-            return nomeMes;
-        case 4: 
-            nomeMes = "Maio";
-            return nomeMes;
-        case 5: 
-            nomeMes = "Junho";
-            return nomeMes;
-        case 6: 
-            nomeMes = "Julho";
-            return nomeMes;
-        case 7: 
-            nomeMes = "Agosto";
-            return nomeMes;
-        case 8: 
-            nomeMes = "Setembro";
-            return nomeMes;
-        case 9: 
-            nomeMes = "Outubro";
-            return nomeMes;
-        case 10: 
-            nomeMes = "Novembro";
-            return nomeMes;
-        case 11: 
-            nomeMes = "Dezembro";
-            return nomeMes;
-        default:
-            nomeMes = "Não é um dia valido";
-            return nomeMes;
-    }
+   return meses[valorMes];
 }
 function adicionaZero(hora)
 {
