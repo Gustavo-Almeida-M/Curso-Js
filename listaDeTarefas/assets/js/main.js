@@ -7,7 +7,10 @@ form.addEventListener('submit', function(informacoes)
     const titulo = informacoes.target.querySelector('.tituloTarefa');
     const descricao = informacoes.target.querySelector('.descricaoTarefa');
 
-    imprimir(titulo, descricao);
+    let TT = criaTitulo(titulo);
+    let DD = criaDescricao(descricao);
+
+    imprimir(TT, DD);
 });
 
 function criaTitulo()
