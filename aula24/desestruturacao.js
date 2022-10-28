@@ -10,10 +10,11 @@ let pessoa =
 
     vizinho:
     {
-        nomeV: "Carlos"
+        nomeV: "Carlos",
+        aviao: 762
     }
 };
 
-let {nome, idade, peso, vizinho: {nomeV}} = pessoa;
+let {nome, idade, peso, vizinho: {nomeV}, ...resto} = pessoa;
 
-console.log(nome, idade, peso, nomeV);
+console.log(nome, idade, peso, nomeV, resto);
