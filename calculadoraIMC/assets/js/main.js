@@ -1,6 +1,7 @@
 const form = document.querySelector('#formulario');
 
-form.addEventListener('submit', function (e){
+form.addEventListener('submit', function (e)
+{
     e.preventDefault();
     
     const inputPeso = e.target.querySelector('.peso');

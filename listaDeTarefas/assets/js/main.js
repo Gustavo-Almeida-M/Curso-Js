@@ -1,41 +1,43 @@
-const form = document.querySelector('.formulario');
+const form = document.querySelector('#formulario');
 
-form.addEventListener('submit', function(informacoes)
+form.addEventListener('submit', function (e)
 {
-    informacoes.preventDefault();
+    e.preventDefault();
+    
+    const inputPeso = e.target.querySelector('.peso');
+    const inptAltura = e.target.querySelector('.altura');
 
-    const titulo = informacoes.target.querySelector('.tituloTarefa');
-    const descricao = informacoes.target.querySelector('.descricaoTarefa');
+    const peso = inputPeso.value;
+    const altura = inptAltura.value;
 
-    let TT = criaTitulo(titulo);
-    let DD = criaDescricao(descricao);
+console.log(peso, altura);
 
-    imprimir(TT, DD);
+    resultado(msg, true);
 });
 
-function criaTitulo()
+function criaP()
 {
-    const nomeTitulo = document.createElement('h1');
-
-    return nomeTitulo;
+    const p = document.createElement('p');
+    return p; 
 }
-function criaDescricao()
+
+function resultado(msg, isValid)
 {
-    const nomeDescricao = document.createElement('p');
+    const valor = document.querySelector('.valor');
+    valor.innerHTML = '';
+    const p = criaP();
 
-    return nomeDescricao;
-}
-function imprimir(titulo, descricao)
-{
-    const tarefa = document.querySelector('.localTarefa');
-    tarefa.innerHTML = '';
+    if(isValid)
+    {
+        p.classList.add('valido');
+    }
+    else
+    {
+        p.classList.add('invalido');
+    }
 
-    const imprimirTitulo = criaTitulo();
-    const imprimirDescricao = criaDescricao();
-
-    imprimirTitulo.innerHTML = titulo;
-    imprimirDescricao.innerHTML = descricao;
-
-    tarefa.appendChild(imprimirTitulo);
-
+    
+    p.innerHTML = msg;
+    
+    valor.appendChild(p);
 }

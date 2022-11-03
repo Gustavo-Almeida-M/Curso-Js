@@ -13,22 +13,21 @@
 
 <body>
     <section class="container">
-        <h1>Lista de tarefas</h1>
-        <form action="" class="formulario">
-            
-            <label for="novoTitulo"></label>
-            <input type="text" id="novoTitulo" class="tituloTarefa">
+        <form action="submit" id="formulario" class="form" method="post">
+            <label for="input-01">Peso:</label>
+            <input type="text" id="input-01" class="peso">
 
-            <label for="novaDescricao"></label>
-            <input type="text" id="novaDescricao" class="descricaoTarefa">
+            <label for="input-02">Altura:</label>
+            <input type="text" id="input-02" class="altura">
 
-            <input class="button" type="button" id="" value="Criar tarefa">
+            <button type="submit" class="button">Enviar</button>
 
-            <div class="localTarefa">
+            <div class="valor">
+                
             </div>
         </form>
     </section>
-    <script src="assets/js/main.js"></script>   
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
