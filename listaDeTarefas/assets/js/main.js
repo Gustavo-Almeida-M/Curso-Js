@@ -4,40 +4,37 @@ form.addEventListener('submit', function (e)
 {
     e.preventDefault();
     
-    const inputPeso = e.target.querySelector('.peso');
-    const inptAltura = e.target.querySelector('.altura');
+    const inputTitulo = e.target.querySelector('.titulo');
+    const inputDescricao = e.target.querySelector('.descricao');
 
-    const peso = inputPeso.value;
-    const altura = inptAltura.value;
 
-console.log(peso, altura);
-
-    resultado(msg, true);
+    resultado(inputTitulo.value, inputDescricao.value);
 });
 
+function criaH2()
+{
+    const h2 = document.createElement('h2');
+    return h2; 
+}
 function criaP()
 {
-    const p = document.createElement('p');
-    return p; 
+    const h2 = document.createElement('p');
+    return h2; 
 }
 
-function resultado(msg, isValid)
+function resultado(titulo, descricao)
 {
-    const valor = document.querySelector('.valor');
-    valor.innerHTML = '';
-    const p = criaP();
-
-    if(isValid)
-    {
-        p.classList.add('valido');
-    }
-    else
-    {
-        p.classList.add('invalido');
-    }
-
+    const valorTitulo = document.querySelector('.areaTitulo');
+    valorTitulo.innerHTML = '';
+    const valorDescricao = document.querySelector('.areaDescricao');
+    valorDescricao.innerHTML = '';
+    const areaTitulo = criaH2();
+    const areaDescricao = criaP();
     
-    p.innerHTML = msg;
     
-    valor.appendChild(p);
+    areaTitulo.innerHTML = titulo;
+    areaDescricao.innerHTML = descricao;
+    
+    valorTitulo.appendChild(areaTitulo);
+    valorDescricao.appendChild(areaDescricao);
 }
