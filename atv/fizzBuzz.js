@@ -33,4 +33,7 @@ function fizzBuzz(valor)
         console.log(valor);
     }
 }
-fizzBuzz(8);
+for(let i = 0; i < 30; i++)
+{
+    fizzBuzz(i);
+}
