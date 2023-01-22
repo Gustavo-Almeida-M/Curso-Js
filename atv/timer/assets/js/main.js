@@ -26,10 +26,12 @@ function iniciaRelogio()
 
 iniciar.addEventListener('click', function()
 {
+    contador.classList.remove('pausado');
     iniciaRelogio();
 });
 pausar.addEventListener('click', function()
 {
+    contador.classList.add('pausado');
     clearInterval(time);
 });
 zerar.addEventListener('click', function()
