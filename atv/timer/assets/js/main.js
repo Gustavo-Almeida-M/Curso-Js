@@ -5,7 +5,7 @@ function timer(segundos)
     {
         hour12: false,
         timeZone: 'UTC'
-    })
+    });
 }
 
 const contador = document.querySelector('.contador');

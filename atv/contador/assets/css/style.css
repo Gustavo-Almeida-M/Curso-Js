@@ -58,3 +58,7 @@ form input:focus
 {
     margin: 20px auto;
 }
+.pausado
+{
+    color: red;
+}

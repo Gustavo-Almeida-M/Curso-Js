@@ -31,14 +31,17 @@ document.addEventListener('click', function(ativar)
     const localClicado = ativar.target;
     if(localClicado.classList.contains('iniciar'))
     {
+        contador.classList.remove('pausado');
         iniciaRelogio();
     }
     if(localClicado.classList.contains('pausar'))
     {
+        contador.classList.add('pausado');
         clearInterval(time);
     }
     if(localClicado.classList.contains('zerar'))
     {
+        contador.classList.remove('pausado');
         segundos = 0;
         clearInterval(time);
         contador.innerHTML = timer(segundos);
