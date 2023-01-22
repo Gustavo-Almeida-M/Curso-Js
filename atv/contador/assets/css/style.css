@@ -1,0 +1,60 @@
+:root
+{
+    --cor-primaria: rgb(7, 43, 150);
+}
+
+*
+{
+    box-sizing: content-box;
+    margin: 0;
+    outline: 0;
+}
+body
+{
+    background-color: var(--cor-primaria);
+}
+.container
+{
+    background-color: #fff;
+    max-width: 640px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+.container h1, input, p
+{
+    margin: 15px 0px;
+    width: 100%;
+    display: block;
+}
+form input
+{
+    font-size: 24px;
+    height: 30px;
+}
+
+form input:focus
+{
+    outline: 1px solid var(--cor-primaria);
+}
+.button
+{
+    width: 50%;
+    margin: 0px auto;
+    border: solid 0.5px rgb(0, 0, 0);
+    border-radius: 3px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+}
+.titulo
+{
+    font-size: 3rem;
+}
+.contador
+{
+    font-size: 3rem;
+}
+.botoes
+{
+    margin: 20px auto;
+}
