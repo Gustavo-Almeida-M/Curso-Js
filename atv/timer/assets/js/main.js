@@ -24,20 +24,32 @@ function iniciaRelogio()
     }, 1000)
 }
 
-iniciar.addEventListener('click', function()
+document.addEventListener('click', function(e)
 {
-    contador.classList.remove('pausado');
-    iniciaRelogio();
+    const localClicado = e.target;
+
+    //Comando para zerar o contador
+    if(localClicado.classList.contains('zerar'))
+    {
+        contador.classList.remove('pausado');
+        clearInterval(time);
+        contador.innerHTML = '00:00:00';
+        segundos = 0;
+    }
+
+    //Comando para pausar
+    if(localClicado.classList.contains('pausar'))
+    {
+        contador.classList.add('pausado');
+        clearInterval(time);
+    }
+
+    //Comando para iniciar
+    if(localClicado.classList.contains('iniciar'))
+    {
+        contador.classList.remove('pausado');
+        iniciaRelogio();
+    }
 });
-pausar.addEventListener('click', function()
-{
-    contador.classList.add('pausado');
-    clearInterval(time);
-});
-zerar.addEventListener('click', function()
-{
-    clearInterval(time);
-    contador.innerHTML = '00:00:00';
-    segundos = 0;
-});
+
 
