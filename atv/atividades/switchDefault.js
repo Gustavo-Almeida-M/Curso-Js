@@ -18,4 +18,5 @@ function switchOfStuff(val)
     }
     return answer;
 }
-switchOfStuff("a");
+const value = switchOfStuff("a");
+console.log(value);
