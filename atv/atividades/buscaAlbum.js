@@ -47,6 +47,8 @@
         return records;
         }
     }
-    updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me")
-    updateRecords(recordCollection, 2468, "tracks", "Free")
+    updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
+    updateRecords(recordCollection, 2468, "tracks", "Free");
+    updateRecords(recordCollection, 5439, "artist", "Abba");
+    updateRecords(recordCollection, 1245, "tracks", "Fusca Preto");
     console.log(recordCollection);
