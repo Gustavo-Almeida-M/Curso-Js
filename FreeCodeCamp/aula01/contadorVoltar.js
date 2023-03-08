@@ -1,7 +1,21 @@
-let numeroVoltas = 0;
+let numeroVisitante = 0;
+let contador = document.querySelector(".contador")
+let visitantesAnteriores = 0;
+let imprimeAnteriores = document.querySelector(".numeroVisi");
 
 function incrementaVoltar()
 {
-    numeroVoltas++;
+    numeroVisitante++;
+    console.log(numeroVisitante);
+    contador.innerText = numeroVisitante;
 }
-console.log(numeroVoltas);
+function zerar()
+{
+    numeroVisitante = 0;
+    contador.innerText = numeroVisitante;
+}
+function save()
+{
+    visitantesAnteriores = numeroVisitante;
+    imprimeAnteriores.innerText += " " + visitantesAnteriores + "-";
+}
