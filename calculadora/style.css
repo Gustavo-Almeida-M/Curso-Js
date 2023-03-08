@@ -1,0 +1,15 @@
+.calculadora
+{
+    height: 500px;
+    width: 400px;
+    background-color: #000;
+    margin: 50px auto;
+}
+.visor
+{
+    background-color: blue;
+    width: 350px;
+    height: 50px;
+    margin: 40px 25px;
+    position: absolute;
+}
