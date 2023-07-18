@@ -16,7 +16,7 @@ body
 .container
 {
     background-color: #fff;
-    max-width: 640px;
+    max-width: 500px;
     margin: 50px auto;
     padding: 30px;
     border-radius: 10px;
@@ -51,8 +51,33 @@ button
     height: 50px;
     width: 100%;
     margin: 0px auto;
-    border: solid 0.5px rgb(0, 0, 0);
+    border: solid 1px rgb(0, 0, 0);
     border-radius: 3px;
     background-color: var(--cor-primaria);
     color: #fff;
+}
+.informacoes
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.resultado
+{
+    width: 100%;
+}
+.resultadoPositivo
+{
+    padding: 10px 6px;
+    background-color: #01b127;
+    color: #fff;
+    border: #000 1px solid;
+    border-radius: 3px;
+}
+.resultadoNegativo
+{
+    padding: 10px 6px;
+    background-color: #be0202;
+    color: #fff;
+    border: #000 1px solid;
+    border-radius: 3px;
 }
