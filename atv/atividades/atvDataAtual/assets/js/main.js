@@ -26,5 +26,10 @@ function horaBR()
 
     principal.innerHTML = `<h1> Hoje é ${dia} dia ${diaMes}, do mês de ${mes} do ano ${ano} </h1>`;
 }
-
 horaBR();
+
+
+//Maneira simplificada:
+// const principal = document.querySelector('.container h1');
+// const data = new Date();
+// principal.innerHTML = data.toLocaleDateString( 'pt-BR' , { dateStyle: 'full'});
