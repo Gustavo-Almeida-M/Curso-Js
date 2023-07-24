@@ -38,7 +38,7 @@ form input:focus
 {
     outline: 1px solid var(--cor-primaria);
 }
-.button
+button
 {
     width: 50%;
     margin: 0px auto 0px 23%;
