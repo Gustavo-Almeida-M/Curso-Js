@@ -1,0 +1,13 @@
+button {
+    width: 50%;
+    border: solid 0.5px rgb(0, 0, 0);
+    border-radius: 3px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    margin-top: 15px; /* Adicionando um espaço entre o último input e o botão */
+}
+.divButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

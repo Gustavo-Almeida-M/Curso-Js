@@ -1,8 +1,7 @@
 const nome = 'Gustavo';
 const sobrenome = 'Almeida';
 
-const falaNome = () =>
-{
+const falaNome = () =>{
     return nome;
 }
 
